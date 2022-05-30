@@ -19,8 +19,6 @@ def get_shop_list_by_dishes(dishes, person_count=1):
         ingridients = cook_book.get(dish)
         for ingridient in range(len(ingridients)):
             new_key = ingridients[ingridient]['ingredient_name']
-            # new_dict = ingridients[ingridient].copy()
-            # del new_dict['ingredient_name']
             if new_key in shop_list.keys():
                 shop_list[new_key] = {'quantity' : ingridients[ingridient]['quantity'] + shop_list[new_key]['quantity'],'measure' : shop_list[new_key]['measure']}
             else:
